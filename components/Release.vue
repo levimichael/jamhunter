@@ -43,17 +43,14 @@ watch(currentlyPlaying, (val) => {
     if (!val) audio.value?.pause()
 })
 
-
-
 onMounted(() => {
-    if (audio.value) {
-        audio.value.addEventListener('play', () => {
-            state.value = 'playing'
-        })
-        audio.value.addEventListener('pause', () => {
-            state.value = 'paused'
-        })
-    }
+    audio.value?.addEventListener('play', () => {
+        state.value = 'playing'
+    })
+
+    audio.value?.addEventListener('pause', () => {
+        state.value = 'paused'
+    })
 })
 
 </script>
