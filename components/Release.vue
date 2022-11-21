@@ -1,6 +1,6 @@
 <template>
-    <div>
-        {{ state }}
+    <div
+        class="hover:scale-105 transition duration-300 ease-in-out hover:z-50 hover:shadow-xl rounded-lg overflow-clip">
         <audio :src="preview" ref="audio" hidden></audio>
         <img :src="image" @click="togglePlay">
     </div>
