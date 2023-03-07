@@ -36,6 +36,7 @@ export const getTracks = async () => {
 
   return data.tracks.items.map(item => {
     return {
+      id: item.id,
       name: item.name,
       artists: item.artists.map(artist => {
         return {
