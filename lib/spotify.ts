@@ -25,7 +25,7 @@ export const getAccessToken = async () => {
 export const getTracks = async () => {
   const token = await getAccessToken()
   const data = await $fetch(
-    'https://api.spotify.com/v1/search?type=track&include_external=audio&q=year:2022&limit=50',
+    'https://api.spotify.com/v1/search?type=track&include_external=audio&q=year:2023&limit=50',
     {
       method: 'GET',
       headers: {
@@ -33,6 +33,7 @@ export const getTracks = async () => {
       }
     }
   )
+  
 
   return data.tracks.items.map(item => {
     return {
