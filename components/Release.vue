@@ -10,6 +10,9 @@ const props = defineProps({
     preview: {
         type: String,
     },
+    id: {
+        type: String,
+    },
     image: {
         type: String
     },
