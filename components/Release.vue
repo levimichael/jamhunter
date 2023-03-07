@@ -1,6 +1,6 @@
 <template>
     <div
-        class="hover:scale-105 transition duration-300 ease-in-out hover:z-50 hover:shadow-xl rounded-lg overflow-clip">
+        class="hover:scale-105 hover:cursor-pointer transition duration-300 ease-in-out hover:z-50 hover:shadow-xl rounded-lg overflow-clip">
         <audio :src="preview" ref="audio" hidden></audio>
         <img :src="image" @click="togglePlay">
     </div>
