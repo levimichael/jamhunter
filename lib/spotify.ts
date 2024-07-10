@@ -25,7 +25,7 @@ export const getAccessToken = async () => {
 export const getTracks = async () => {
   const token = await getAccessToken()
   const data = await $fetch(
-    'https://api.spotify.com/v1/search?type=track&include_external=audio&q=year:2024&limit=50&market=US&popularity=100',
+    'https://api.spotify.com/v1/search?type=track&include_external=audio&q=year:2024&limit=50&market=US',
     {
       method: 'GET',
       headers: {
@@ -53,5 +53,5 @@ export const getTracks = async () => {
       duration: item.duration_ms,
       popularity: item.popularity
     }
-  })
+  }).filter(t => t.popularity > 50)
 }
