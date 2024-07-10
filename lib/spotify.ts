@@ -22,10 +22,10 @@ export const getAccessToken = async () => {
   return access_token
 }
 
-export const getTracks = async () => {
+export const getTracks = async (offset:number) => {
   const token = await getAccessToken()
   const data = await $fetch(
-    'https://api.spotify.com/v1/search?type=track&include_external=audio&q=year:2024&limit=50&market=US',
+    `https://api.spotify.com/v1/search?type=track&include_external=audio&q=year:2024&limit=50&market=US&offset=${offset}`,
     {
       method: 'GET',
       headers: {
