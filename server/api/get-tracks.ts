@@ -1,4 +1,5 @@
 import { getTracks } from '~/lib/spotify'
 export default defineEventHandler(async () => {
-  return getTracks()
+  const tracks = Promise.all([getTracks(), getTracks(), getTracks()])
+  return tracks.flat()
 })
