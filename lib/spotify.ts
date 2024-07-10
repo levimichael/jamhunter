@@ -53,5 +53,5 @@ export const getTracks = async (offset:number) => {
       duration: item.duration_ms,
       popularity: item.popularity
     }
-  })
+  }).filter(item => item.popularity > 50)
 }
