@@ -53,5 +53,5 @@ export const getTracks = async () => {
       duration: item.duration_ms,
       popularity: item.popularity
     }
-  }).filter(t => t.popularity > 50)
+  })
 }
